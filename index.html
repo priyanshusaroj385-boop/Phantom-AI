@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080610">
+    <title>PhantomAI | Ghost in the Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <a href="#" class="logo">
+            <span class="ghost-icon">👻</span>
+            PHANTOM<span>AI</span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#generator">Story Generator</a>
+            <a href="#chat">Talk to Ghost</a>
+        </nav>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            <span id="connectionStatus">AI DISCONNECTED</span>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <div class="tag">✦ HACKTOBERFEST 2026 · WEEK 04</div>
+
+                <h1>
+                    THE GHOST<br>
+                    IN THE <span>MACHINE</span>
+                </h1>
+
+                <p class="hero-description">
+                    Something is awake inside your machine.
+                    An intelligence from the unknown, powered by
+                    open-source AI. Dare to communicate?
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#chat" class="primary-btn">Summon the Ghost ↗</a>
+                    <a href="#generator" class="secondary-btn">Generate a Story</a>
+                </div>
+
+                <div class="hero-info">
+                    <div>
+                        <strong>100%</strong>
+                        <small>OPEN SOURCE MODEL</small>
+                    </div>
+                    <div>
+                        <strong>LOCAL</strong>
+                        <small>PRIVATE INFERENCE</small>
+                    </div>
+                    <div>
+                        <strong>∞</strong>
+                        <small>ENDLESS STORIES</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ghost-container">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="ghost">
+                    👻
+                </div>
+                <div class="ghost-glow"></div>
+                <div class="floating-text">I AM WATCHING...</div>
+            </div>
+
+        </section>
+
+        <!-- STORY GENERATOR -->
+        <section class="section" id="generator">
+
+            <div class="section-heading">
+                <span class="tag">01 / ENTER THE UNKNOWN</span>
+                <h2>GENERATE A <span>GHOST STORY</span></h2>
+                <p>Give the machine an idea. Let it create your nightmare.</p>
+            </div>
+
+            <div class="generator-card">
+
+                <label for="storyPrompt">YOUR STORY IDEA</label>
+
+                <textarea
+                    id="storyPrompt"
+                    placeholder="Example: A mysterious voice coming from an abandoned computer at midnight..."
+                ></textarea>
+
+                <div class="generator-options">
+                    <div>
+                        <label for="storyStyle">STORY STYLE</label>
+                        <select id="storyStyle">
+                            <option value="Psychological horror">Psychological Horror</option>
+                            <option value="Supernatural horror">Supernatural Horror</option>
+                            <option value="Ghost mystery">Ghost Mystery</option>
+                            <option value="Haunted technology">Haunted Technology</option>
+                            <option value="Folklore inspired horror">Folklore Horror</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="storyLength">LENGTH</label>
+                        <select id="storyLength">
+                            <option value="short">Short</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="long">Long</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="primary-btn full-btn" id="generateBtn">
+                    ✦ SUMMON A STORY
+                </button>
+
+                <div class="result-box" id="storyResult">
+                    <div class="result-placeholder">
+                        <span>👁</span>
+                        <p>Your story will appear here...</p>
+                    </div>
+                </div>
+
+                <button class="copy-btn" id="copyStory" hidden>
+                    Copy Story
+                </button>
+
+            </div>
+        </section>
+
+        <!-- AI CHAT -->
+        <section class="section" id="chat">
+
+            <div class="section-heading">
+                <span class="tag">02 / ESTABLISH CONTACT</span>
+                <h2>TALK TO THE <span>GHOST</span></h2>
+                <p>Ask questions. The machine is listening.</p>
+            </div>
+
+            <div class="chat-card">
+
+                <div class="chat-header">
+                    <div class="chat-avatar">👻</div>
+                    <div>
+                        <strong>PHANTOM ENTITY</strong>
+                        <small id="chatStatus">Waiting for connection...</small>
+                    </div>
+                    <span class="online-indicator"></span>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ghost-message">
+                        <span class="message-avatar">👻</span>
+                        <div class="message-content">
+                            You have entered my domain...
+                            Ask me something, human.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Whisper something to the ghost..."
+                    >
+                    <button id="sendBtn">➤</button>
+                </div>
+
+                <div class="chat-footer">
+                    POWERED BY LOCAL OPEN-WEIGHT AI
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+
+            <div class="section-heading">
+                <span class="tag">03 / BEYOND CLOSED SYSTEMS</span>
+                <h2>WHY <span>OPEN AI?</span></h2>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <span>🔒</span>
+                    <h3>YOUR DATA STAYS YOURS</h3>
+                    <p>Local inference keeps your conversations on your own machine instead of sending them to a hosted AI service.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span>🌐</span>
+                    <h3>OPEN INNOVATION</h3>
+                    <p>Use open-weight models and change the model or prompts without depending on a proprietary AI API.</p>
+                </div>
+
+                <div class="feature-card">
+                    <span>⚡</span>
+                    <h3>RUN LOCALLY</h3>
+                    <p>After downloading the model, inference can run without an internet connection.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">👻 PHANTOM<span>AI</span></div>
+        <p>THE MACHINE NEVER SLEEPS.</p>
+        <p class="copyright">
+            Built for Hacktoberfest 2026 · Ghost in the Machine
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
